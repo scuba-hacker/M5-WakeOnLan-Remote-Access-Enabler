@@ -38,7 +38,6 @@ bool firstSetupDone=false;
 
 void setup() {
   // put your setup code here, to run once:
-
   WOL.setRepeat(100, 100); // 10 seconds of send - Set Wake On LAN To Repeat the packet 100 times with 100ms delay between
   // The mac will only wake up for 1 minute in response to the first WOL packets it sees.
   // Mac ignores all subsequent WOL packets during that minute, so repeat the WOL send after 55 seconds.
