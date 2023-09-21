@@ -32,7 +32,7 @@ WakeOnLan WOL(UDP); // Pass WiFiUDP class
 
 // Press button A - big button - to quit
 
-int screenBrightness = 8; // start at 2nd lowest brightness
+int screenBrightness = 50;
 
 bool firstSetupDone=false;
 
@@ -85,7 +85,7 @@ void setup() {
     while (n--)
     {
       M5.Lcd.print("+");
-      WOL.sendMagicPacket(Target_iMac_Ethernet_MACAddress); // UDP uses default port 9
+      WOL.sendMagicPacket(Target_Ethernet_MACAddress); // UDP uses default port 9
       M5.update(); if (M5.BtnA.isPressed()) break; delay (5000);
       M5.update(); if (M5.BtnA.isPressed()) break; delay (5000);
       M5.update(); if (M5.BtnA.isPressed()) break; delay (5000);
